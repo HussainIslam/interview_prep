@@ -45,27 +45,17 @@
 	8. TRACE: performs message loop-back test to target
 	9. PATCH: partial modifications to resources
 
-8. Explain the difference between stateless and stateful protocols. Which type of protocol is HTTP? Explain your answer.
-A stateless communications protocol treats each request as an independent
-transaction. It therefore does not require the server to retain any session,
-  identity, or status information spanning multiple requests from the same
-  source. Similarly, the requestor can not rely on any such information being
-  retained by the responder.
+8. **Explain the difference between stateless and stateful protocols. Which type of protocol is HTTP?** A _stateless_ communications protocol treats each request as an independent transaction. So, it does not require the server to retain any identity, or status information spanning multiple requests from the same source. Similarly, the requestor can not rely on any such information being retained by the responder. In contrast, a _stateful_ communications protocol is one in which the responder maintains “state” information (session data, identity, status, etc.) across multiple requests from the same source.
 
-In contrast, a stateful communications protocol is one in which the responder
-maintains “state” information (session data, identity, status, etc.) across
-multiple requests from the same source.
+HTTP is a stateless protocol. HTTP does not require server to retain information or status about each user for the duration of multiple requests.
 
-HTTP is a stateless protocol. HTTP does not require server to retain information
-or status about each user for the duration of multiple requests.
-
-Some web servers implement states using different methods (using cookies, custom
-    headers, hidden form fields etc.). However, in the very core of every web
-application everything relies on HTTP which is still a stateless protocol that
-is based on simple request/response paradigm.
-
-9. What is the difference between PUT and POST?
-
-[Link](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/PUT)
+9. **What is the difference between PUT and POST?** The primary difference between these two is that PUT requests are idempotent. That is, calling the same PUT multiple times produces the same result. For example, the first time PUT is called, it will create if the resource doesn't exists; otherwise, it will update the resource. On the contrary, if POST is called multiple times, it will create multiple resouces [Reference](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/PUT).
 
 
+
+
+## Java
+1. What is JVM?
+2. What are the differences between JDK, JRE, and JVM?
+3. Why is Java 'write once and run everywhere'?
+4. What is classloader?
